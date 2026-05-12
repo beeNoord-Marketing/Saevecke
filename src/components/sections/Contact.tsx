@@ -1,0 +1,152 @@
+import { useState } from 'react';
+import { Section } from '../layout/Section';
+import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+
+type Mode = 'bewerbung' | 'kunde';
+
+export function Contact() {
+  const [mode, setMode] = useState<Mode>('bewerbung');
+
+  return (
+    <Section id="kontakt">
+      <h2 className="text-3xl md:text-4xl font-semibold">Kontakt</h2>
+      <p className="mt-2 text-brand-text">
+        Schreib uns, wir antworten zackig.
+      </p>
+
+      <div className="mt-8 inline-flex rounded-full bg-neutral-100 p-1">
+        <button
+          type="button"
+          onClick={() => setMode('bewerbung')}
+          className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
+            mode === 'bewerbung'
+              ? 'bg-brand-red text-white'
+              : 'text-brand-headline hover:text-brand-red'
+          }`}
+        >
+          Ich bewerbe mich
+        </button>
+        <button
+          type="button"
+          onClick={() => setMode('kunde')}
+          className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
+            mode === 'kunde'
+              ? 'bg-brand-cta text-white'
+              : 'text-brand-headline hover:text-brand-cta'
+          }`}
+        >
+          Ich bin Kunde / Interessent
+        </button>
+      </div>
+
+      <div className="mt-10 grid gap-10 md:grid-cols-2">
+        <div className="space-y-4">
+          <div className="flex items-start gap-3">
+            <MapPin size={20} className="text-brand-red mt-0.5" />
+            <div>
+              Saevecke GmbH
+              <br />
+              Platzhalter-Straße
+              <br />
+              28790 Schwanewede
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <Phone size={20} className="text-brand-red" />
+            <a
+              href="tel:+490000000000"
+              className="text-brand-headline hover:text-brand-red"
+            >
+              +49 0000 000 000
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <Mail size={20} className="text-brand-red" />
+            <a
+              href="mailto:info@saevecke.net"
+              className="text-brand-headline hover:text-brand-red"
+            >
+              info@saevecke.net
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <MessageCircle size={20} className="text-brand-red" />
+            <a
+              href="https://wa.me/000000000"
+              className="text-brand-headline hover:text-brand-red"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <form onSubmit={(e) => e.preventDefault()} className="space-y-3">
+          {mode === 'bewerbung' ? (
+            <>
+              <label className="block text-sm font-semibold">Name</label>
+              <input
+                type="text"
+                className="w-full border border-neutral-300 px-3 py-2"
+              />
+              <label className="block text-sm font-semibold">
+                Telefon / E-Mail
+              </label>
+              <input
+                type="text"
+                className="w-full border border-neutral-300 px-3 py-2"
+              />
+              <label className="block text-sm font-semibold">
+                Nachricht (optional)
+              </label>
+              <textarea
+                rows={5}
+                className="w-full border border-neutral-300 px-3 py-2"
+              />
+              <label className="block text-sm font-semibold">
+                Lebenslauf (optional)
+              </label>
+              <input type="file" className="w-full text-sm" />
+              <button
+                type="submit"
+                className="bg-brand-red text-white px-6 py-2 font-semibold hover:opacity-90"
+              >
+                Bewerbung absenden
+              </button>
+            </>
+          ) : (
+            <>
+              <label className="block text-sm font-semibold">Name</label>
+              <input
+                type="text"
+                className="w-full border border-neutral-300 px-3 py-2"
+              />
+              <label className="block text-sm font-semibold">
+                Firma (optional)
+              </label>
+              <input
+                type="text"
+                className="w-full border border-neutral-300 px-3 py-2"
+              />
+              <label className="block text-sm font-semibold">E-Mail</label>
+              <input
+                type="email"
+                className="w-full border border-neutral-300 px-3 py-2"
+              />
+              <label className="block text-sm font-semibold">Nachricht</label>
+              <textarea
+                rows={5}
+                className="w-full border border-neutral-300 px-3 py-2"
+              />
+              <button
+                type="submit"
+                className="bg-brand-cta text-white px-6 py-2 font-semibold hover:opacity-90"
+              >
+                Nachricht senden
+              </button>
+            </>
+          )}
+        </form>
+      </div>
+    </Section>
+  );
+}
