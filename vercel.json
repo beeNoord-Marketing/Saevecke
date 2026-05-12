@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/((?!assets|node_modules|src|@|_vite).*)", "destination": "/index.html" }
+  ]
+}
