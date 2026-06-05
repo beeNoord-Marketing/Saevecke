@@ -14,7 +14,7 @@ export function Contact() {
         Schreib uns, wir antworten zackig.
       </p>
 
-      <div className="mt-8 inline-flex rounded-full bg-neutral-100 p-1">
+      <div className="mt-8 inline-flex rounded-full bg-brand-cta/10 p-1">
         <button
           type="button"
           onClick={() => setMode('bewerbung')}
@@ -86,21 +86,21 @@ export function Contact() {
               <label className="block text-sm font-semibold">Name</label>
               <input
                 type="text"
-                className="w-full border border-neutral-300 px-3 py-2"
+                className="w-full border border-brand-cta/30 px-3 py-2"
               />
               <label className="block text-sm font-semibold">
                 Telefon / E-Mail
               </label>
               <input
                 type="text"
-                className="w-full border border-neutral-300 px-3 py-2"
+                className="w-full border border-brand-cta/30 px-3 py-2"
               />
               <label className="block text-sm font-semibold">
                 Nachricht (optional)
               </label>
               <textarea
                 rows={5}
-                className="w-full border border-neutral-300 px-3 py-2"
+                className="w-full border border-brand-cta/30 px-3 py-2"
               />
               <label className="block text-sm font-semibold">
                 Lebenslauf (optional)
@@ -118,24 +118,24 @@ export function Contact() {
               <label className="block text-sm font-semibold">Name</label>
               <input
                 type="text"
-                className="w-full border border-neutral-300 px-3 py-2"
+                className="w-full border border-brand-cta/30 px-3 py-2"
               />
               <label className="block text-sm font-semibold">
                 Firma (optional)
               </label>
               <input
                 type="text"
-                className="w-full border border-neutral-300 px-3 py-2"
+                className="w-full border border-brand-cta/30 px-3 py-2"
               />
               <label className="block text-sm font-semibold">E-Mail</label>
               <input
                 type="email"
-                className="w-full border border-neutral-300 px-3 py-2"
+                className="w-full border border-brand-cta/30 px-3 py-2"
               />
               <label className="block text-sm font-semibold">Nachricht</label>
               <textarea
                 rows={5}
-                className="w-full border border-neutral-300 px-3 py-2"
+                className="w-full border border-brand-cta/30 px-3 py-2"
               />
               <button
                 type="submit"

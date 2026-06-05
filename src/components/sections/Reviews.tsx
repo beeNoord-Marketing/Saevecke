@@ -18,13 +18,13 @@ const reviews = [
 
 export function Reviews() {
   return (
-    <Section className="bg-neutral-50">
+    <Section className="bg-brand-cta/5">
       <h2 className="text-3xl md:text-4xl font-semibold">Stimmen</h2>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {reviews.map((r, i) => (
           <div
             key={i}
-            className="bg-white border border-neutral-200 p-6"
+            className="bg-white border border-brand-cta/20 p-6"
           >
             <div className="flex gap-1 text-brand-red">
               {Array.from({ length: 5 }).map((_, k) => (

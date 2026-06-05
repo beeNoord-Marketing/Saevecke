@@ -27,7 +27,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <Section id="benefits" className="bg-neutral-50">
+    <Section id="benefits" className="bg-brand-cta/10">
       <h2 className="text-3xl md:text-4xl font-semibold">
         Was du bei uns bekommst
       </h2>
@@ -38,14 +38,14 @@ export function Benefits() {
         {benefits.map((b) => (
           <div
             key={b.title}
-            className="relative bg-white border border-neutral-200 p-5"
+            className="relative bg-white border border-brand-cta/20 p-5"
           >
             {b.isNew && (
               <span className="absolute top-3 right-3 bg-brand-red text-white text-[10px] font-bold px-2 py-0.5">
                 NEU
               </span>
             )}
-            <b.icon size={28} className="text-brand-deep" />
+            <b.icon size={28} className="text-brand-cta" />
             <h3 className="mt-3 text-sm font-semibold leading-snug">{b.title}</h3>
           </div>
         ))}

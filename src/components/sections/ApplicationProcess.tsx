@@ -30,7 +30,7 @@ const steps = [
 
 export function ApplicationProcess() {
   return (
-    <Section className="bg-neutral-50">
+    <Section className="bg-brand-cta/5">
       <h2 className="text-3xl md:text-4xl font-semibold">
         So läuft die Bewerbung
       </h2>
@@ -38,7 +38,7 @@ export function ApplicationProcess() {
       <div className="mt-12 grid gap-6 md:grid-cols-4">
         {steps.map((s) => (
           <div key={s.n} className="relative">
-            <div className="w-12 h-12 rounded-full bg-brand-deep text-white flex items-center justify-center font-bold">
+            <div className="w-12 h-12 rounded-full bg-brand-cta text-white flex items-center justify-center font-bold">
               {s.n}
             </div>
             <h3 className="mt-4 text-lg font-semibold flex items-center gap-2">

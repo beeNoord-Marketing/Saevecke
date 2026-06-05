@@ -11,7 +11,7 @@ export function Apply() {
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         <a
           href="https://wa.me/000000000"
-          className="block border border-neutral-200 p-6 hover:border-brand-red transition-colors text-brand-headline"
+          className="block border border-brand-cta/20 p-6 hover:border-brand-red transition-colors text-brand-headline"
         >
           <MessageCircle size={28} className="text-brand-red" />
           <h3 className="mt-4 text-lg font-semibold">WhatsApp</h3>
@@ -22,7 +22,7 @@ export function Apply() {
 
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="border border-neutral-200 p-6"
+          className="border border-brand-cta/20 p-6"
         >
           <PhoneCall size={28} className="text-brand-red" />
           <h3 className="mt-4 text-lg font-semibold">Rückruf</h3>
@@ -32,14 +32,14 @@ export function Apply() {
           </label>
           <input
             type="text"
-            className="mt-1 w-full border border-neutral-300 px-3 py-2"
+            className="mt-1 w-full border border-brand-cta/30 px-3 py-2"
           />
           <label className="block mt-3 text-sm font-semibold text-brand-headline">
             Telefon
           </label>
           <input
             type="tel"
-            className="mt-1 w-full border border-neutral-300 px-3 py-2"
+            className="mt-1 w-full border border-brand-cta/30 px-3 py-2"
           />
           <button
             type="submit"
@@ -51,7 +51,7 @@ export function Apply() {
 
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="border border-neutral-200 p-6"
+          className="border border-brand-cta/20 p-6"
         >
           <h3 className="text-lg font-semibold">Kurzbewerbung</h3>
           <p className="mt-2 text-brand-text text-sm">
@@ -62,20 +62,20 @@ export function Apply() {
           </label>
           <input
             type="text"
-            className="mt-1 w-full border border-neutral-300 px-3 py-2"
+            className="mt-1 w-full border border-brand-cta/30 px-3 py-2"
           />
           <label className="block mt-3 text-sm font-semibold text-brand-headline">
             Telefon / E-Mail
           </label>
           <input
             type="text"
-            className="mt-1 w-full border border-neutral-300 px-3 py-2"
+            className="mt-1 w-full border border-brand-cta/30 px-3 py-2"
           />
           <label className="block mt-3 text-sm font-semibold text-brand-headline">
             Nachricht
           </label>
           <textarea
-            className="mt-1 w-full border border-neutral-300 px-3 py-2"
+            className="mt-1 w-full border border-brand-cta/30 px-3 py-2"
             rows={3}
           />
           <label className="block mt-3 text-sm font-semibold text-brand-headline">

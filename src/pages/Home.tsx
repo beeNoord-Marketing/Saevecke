@@ -17,9 +17,9 @@ export function Home() {
         <Hero />
         <Intro />
         <JobTeaser />
-        <div className="bg-brand-cta">
+        <div className="bg-brand-cta/10">
           <div className="mx-auto max-w-6xl px-6">
-            <div className="h-px bg-white/40" />
+            <div className="h-px bg-brand-cta/40" />
           </div>
         </div>
         <DienstleistungenTeaser />

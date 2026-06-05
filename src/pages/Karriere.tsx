@@ -11,8 +11,8 @@ export function Karriere() {
   return (
     <>
       <TopNav />
-      <main>
-        <Section className="bg-brand-deep text-white">
+      <main className="pt-24">
+        <Section className="bg-brand-cta text-white">
           <p className="text-sm uppercase tracking-widest text-white/70">
             Karriere bei Saevecke
           </p>

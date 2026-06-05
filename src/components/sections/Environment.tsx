@@ -2,7 +2,7 @@ import { Section } from '../layout/Section';
 
 export function Environment() {
   return (
-    <Section id="umwelt">
+    <Section id="umwelt" className="bg-brand-cta/10">
       <div className="max-w-3xl">
         <h2 className="text-3xl md:text-4xl font-semibold">
           Umwelt- und Klimaschutz

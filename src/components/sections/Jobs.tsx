@@ -58,7 +58,7 @@ export function Jobs() {
             className={`p-6 border transition-colors ${
               j.featured
                 ? 'border-brand-red bg-white'
-                : 'border-neutral-200 hover:border-brand-deep'
+                : 'border-brand-cta/20 hover:border-brand-cta'
             }`}
           >
             <p

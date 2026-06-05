@@ -1,4 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 
 const links = [
@@ -8,12 +9,49 @@ const links = [
   { label: 'Kontakt', to: '/#kontakt' },
 ];
 
+const NAV_HEIGHT = 96;
+const HERO_VH = 0.85;
+
 export function TopNav() {
+  const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
+
+  useEffect(() => {
+    const compute = () => {
+      const threshold = isHome
+        ? window.innerHeight * HERO_VH - NAV_HEIGHT
+        : 80;
+      setScrolled(window.scrollY > threshold);
+    };
+    compute();
+    window.addEventListener('scroll', compute, { passive: true });
+    window.addEventListener('resize', compute);
+    return () => {
+      window.removeEventListener('scroll', compute);
+      window.removeEventListener('resize', compute);
+    };
+  }, [isHome]);
+
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-neutral-200">
-      <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="font-bold text-brand-headline text-lg">
-          Saevecke
+    <header
+      className={`fixed inset-x-0 top-0 z-40 backdrop-blur-xl border-b transition-colors duration-300 ${
+        scrolled
+          ? 'bg-brand-cta/70 border-white/20'
+          : 'bg-white/0 border-white/30'
+      }`}
+    >
+      <div className="mx-auto max-w-6xl px-6 h-24 flex items-center justify-between">
+        <Link
+          to="/"
+          aria-label="Saevecke GmbH"
+          className="self-stretch bg-white px-4 flex items-center"
+        >
+          <img
+            src="https://cdn.beenoordmarketing.de/Saevecke/logos/saevecke_logo.png"
+            alt="Saevecke GmbH"
+            className="h-16 w-auto block"
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
@@ -24,7 +62,7 @@ export function TopNav() {
                 `transition-colors ${
                   isActive
                     ? 'text-brand-red'
-                    : 'text-brand-headline hover:text-brand-red'
+                    : 'text-white hover:text-brand-red'
                 }`
               }
               end={l.to === '/#kontakt' ? false : undefined}

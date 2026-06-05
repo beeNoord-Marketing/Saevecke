@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   body {
     @apply bg-white text-brand-text;
     font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
