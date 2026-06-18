@@ -1,7 +1,6 @@
 import { TopNav } from '../components/layout/TopNav';
 import { Footer } from '../components/layout/Footer';
 import { StickyWhatsApp } from '../components/layout/StickyWhatsApp';
-import { Section } from '../components/layout/Section';
 import { Jobs } from '../components/sections/Jobs';
 import { ApplicationProcess } from '../components/sections/ApplicationProcess';
 import { Apply } from '../components/sections/Apply';
@@ -11,18 +10,20 @@ export function Karriere() {
   return (
     <>
       <TopNav />
-      <main className="pt-24">
-        <Section className="bg-brand-cta text-white">
-          <p className="text-sm uppercase tracking-widest text-white/70">
-            Karriere bei Saevecke
-          </p>
-          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white">
-            [Headline Karriere, Platzhalter]
-          </h1>
-          <p className="mt-4 text-lg text-white/80 max-w-2xl">
-            Platzhalter, kurzer Karriere-Pitch über der Stellen-Liste.
-          </p>
-        </Section>
+      <main>
+        <section className="bg-brand-cta text-white pt-44 pb-20">
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="text-sm uppercase tracking-widest text-white/70">
+              Karriere
+            </p>
+            <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white">
+              Deine Karriere @Saevecke
+            </h1>
+            <p className="mt-4 text-lg text-white/80 max-w-2xl">
+              Fairer Lohn, ein cooles Team und eine unbefristete Festanstellung.
+            </p>
+          </div>
+        </section>
         <Jobs />
         <ApplicationProcess />
         <Apply />

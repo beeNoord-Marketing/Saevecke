@@ -8,13 +8,13 @@
     overflow-x: hidden;
   }
   body {
-    @apply bg-white text-brand-text;
+    @apply bg-white text-brand-text break-words hyphens-auto;
     font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
   }
   h1,
   h2,
   h3 {
-    @apply text-brand-headline tracking-tight;
+    @apply text-brand-headline tracking-tight uppercase;
     font-family: 'Archivo', 'Source Sans 3', system-ui, sans-serif;
   }
   h1 {

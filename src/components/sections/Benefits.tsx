@@ -32,7 +32,7 @@ export function Benefits() {
         Was du bei uns bekommst
       </h2>
       <p className="mt-2 text-brand-text">
-        Platzhalter, kurze Einleitung zu den Benefits.
+        Mehr als nur ein Job. Das gibt's bei uns obendrauf.
       </p>
       <div className="mt-10 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {benefits.map((b) => (

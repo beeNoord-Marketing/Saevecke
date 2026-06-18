@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Section } from '../layout/Section';
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 
 type Mode = 'bewerbung' | 'kunde';
@@ -8,8 +7,17 @@ export function Contact() {
   const [mode, setMode] = useState<Mode>('bewerbung');
 
   return (
-    <Section id="kontakt">
-      <h2 className="text-3xl md:text-4xl font-semibold">Kontakt</h2>
+    <section id="kontakt" className="relative py-20 overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="https://cdn.beenoordmarketing.de/Saevecke/images/briefkopf.jpg"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/85" />
+      </div>
+      <div className="relative mx-auto max-w-6xl px-6">
+        <h2 className="text-3xl md:text-4xl font-semibold">Kontakt</h2>
       <p className="mt-2 text-brand-text">
         Schreib uns, wir antworten zackig.
       </p>
@@ -46,7 +54,7 @@ export function Contact() {
             <div>
               Saevecke GmbH
               <br />
-              Platzhalter-Straße
+              Rader Heide 19c
               <br />
               28790 Schwanewede
             </div>
@@ -54,10 +62,10 @@ export function Contact() {
           <div className="flex items-center gap-3">
             <Phone size={20} className="text-brand-red" />
             <a
-              href="tel:+490000000000"
+              href="tel:+4942133100400"
               className="text-brand-headline hover:text-brand-red"
             >
-              +49 0000 000 000
+              0421 33100400
             </a>
           </div>
           <div className="flex items-center gap-3">
@@ -105,7 +113,10 @@ export function Contact() {
               <label className="block text-sm font-semibold">
                 Lebenslauf (optional)
               </label>
-              <input type="file" className="w-full text-sm" />
+              <input
+                type="file"
+                className="block w-full text-sm text-brand-text file:mr-4 file:bg-brand-cta file:text-white file:border-0 file:px-4 file:py-2 file:font-semibold file:cursor-pointer hover:file:opacity-90"
+              />
               <button
                 type="submit"
                 className="bg-brand-red text-white px-6 py-2 font-semibold hover:opacity-90"
@@ -146,7 +157,8 @@ export function Contact() {
             </>
           )}
         </form>
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }

@@ -22,7 +22,8 @@ export function JobTeaser() {
             </span>
           </div>
           <p className="mt-6 text-brand-text">
-            Platzhalter, kurzer Pitch zur Geselle-Stelle.
+            Fairer Lohn, ein cooles Team und eine unbefristete Festanstellung?
+            Dann komm vorbei.
           </p>
           <Link
             to="/karriere"

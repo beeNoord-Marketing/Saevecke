@@ -1,69 +1,67 @@
 import { Section } from '../layout/Section';
 
-const placeholderImages = [
-  'https://cdn.beenoordmarketing.de/Saevecke/images/zahnraeder.jpg',
-  'https://cdn.beenoordmarketing.de/Saevecke/images/bohrer-1.jpg',
-  'https://cdn.beenoordmarketing.de/Saevecke/images/daemmwolle-2.jpg',
+const teamBase = 'https://cdn.beenoordmarketing.de/Saevecke/images/';
+
+type Person = { img: string; name: string; role?: string };
+
+const team: Person[] = [
+  {
+    img: `${teamBase}geschaeftsfuehrer.jpg`,
+    name: 'Marko Ihmels',
+    role: 'Geschäftsführer',
+  },
+  { img: `${teamBase}mitarbeiter-1.jpg`, name: 'Platzhalter Name' },
+  { img: `${teamBase}mitarbeiter-2.jpg`, name: 'Platzhalter Name' },
+  { img: `${teamBase}mitarbeiter-3.jpg`, name: 'Platzhalter Name' },
 ];
 
-const teamPlaceholders = Array.from({ length: 6 }, (_, i) => i);
-
-const dogs = [
-  { name: 'Bürohund 1', note: 'Platzhalter-Steckbrief', img: placeholderImages[0] },
-  { name: 'Bürohund 2', note: 'Platzhalter-Steckbrief', img: placeholderImages[1] },
-  { name: 'Bürohund 3', note: 'Platzhalter-Steckbrief', img: placeholderImages[2] },
-];
+const dogs = {
+  img: `${teamBase}hunde.jpg`,
+  names: 'Bürohund 1 und Bürohund 2',
+  note: 'Platzhalter-Steckbrief',
+};
 
 export function Team() {
   return (
     <Section className="bg-brand-cta/5">
       <h2 className="text-3xl md:text-4xl font-semibold">Das Team</h2>
       <p className="mt-2 text-brand-text">
-        Platzhalter, Büroteam plus die drei Bürohunde.
+        Büroteam und unsere zwei Bürohunde.
       </p>
 
-      <div className="mt-10 aspect-video relative overflow-hidden">
-        <img
-          src={placeholderImages[1]}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-brand-cta/60 flex items-center justify-center text-white font-semibold">
-          Teamvideo · Platzhalter
-        </div>
-      </div>
-
-      <h3 className="mt-12 text-xl font-semibold">Büroteam</h3>
-      <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {teamPlaceholders.map((i) => (
-          <div key={i} className="aspect-square overflow-hidden">
-            <img
-              src={placeholderImages[i % placeholderImages.length]}
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-
-      <h3 className="mt-12 text-xl font-semibold">Die Bürohunde</h3>
-      <div className="mt-6 grid gap-6 md:grid-cols-3">
-        {dogs.map((d) => (
-          <div
-            key={d.name}
-            className="bg-white border border-brand-cta/20 p-6"
-          >
-            <div className="aspect-square overflow-hidden">
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+        {team.map((p) => (
+          <div key={p.img}>
+            <div className="aspect-[3/4] overflow-hidden">
               <img
-                src={d.img}
-                alt=""
-                className="w-full h-full object-cover"
+                src={p.img}
+                alt={p.name}
+                className={`w-full h-full object-cover ${
+                  p.role === 'Geschäftsführer'
+                    ? 'scale-110 object-[50%_25%]'
+                    : ''
+                }`}
               />
             </div>
-            <div className="mt-4 font-semibold">{d.name}</div>
-            <div className="text-sm text-brand-text">{d.note}</div>
+            <div className="mt-3 text-sm font-semibold">{p.name}</div>
+            {p.role && (
+              <div className="text-xs text-brand-text">{p.role}</div>
+            )}
           </div>
         ))}
+      </div>
+
+      <h3 className="mt-12 text-xl font-semibold text-center">Die Bürohunde</h3>
+      <div className="mt-6 max-w-xl mx-auto bg-white border border-brand-cta/20 p-6">
+        <div className="aspect-video overflow-hidden">
+          <img
+            src={dogs.img}
+            alt={dogs.names}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="mt-4 font-semibold">{dogs.names}</div>
+        <div className="text-sm text-brand-text">{dogs.note}</div>
       </div>
     </Section>
   );

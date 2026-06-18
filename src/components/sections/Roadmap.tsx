@@ -1,4 +1,5 @@
 import { Section } from '../layout/Section';
+import { ChevronRight } from 'lucide-react';
 
 const milestones = [
   {
@@ -63,16 +64,34 @@ export function Roadmap() {
   return (
     <Section id="ueber-uns">
       <h2 className="text-3xl md:text-4xl font-semibold">Unsere Geschichte</h2>
-      <div className="mt-12 relative max-w-3xl">
-        <div className="absolute left-3 top-2 bottom-2 w-px bg-brand-cta/20" />
-        <div className="space-y-10">
-          {milestones.map((m, i) => (
-            <div key={`${m.year}-${i}`} className="relative pl-14">
-              <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-brand-cta border-4 border-white" />
-              <div className="font-bold text-brand-cta text-xl">{m.year}</div>
-              <p className="mt-2 text-brand-text leading-relaxed">{m.text}</p>
-            </div>
-          ))}
+      <div className="mt-12 bg-white shadow-[0_0_40px_rgba(0,0,0,0.15)] relative">
+        <div className="overflow-x-auto scroll-smooth">
+          <div className="relative flex gap-8 px-8 py-10 min-w-max">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-8 right-8 top-12 h-px bg-brand-cta/30"
+            />
+            {milestones.map((m, i) => (
+              <article
+                key={`${m.year}-${i}`}
+                className="w-72 shrink-0 relative"
+              >
+                <div className="w-4 h-4 rounded-full bg-brand-cta border-4 border-white relative z-10" />
+                <div className="mt-6 font-bold text-brand-cta text-2xl">
+                  {m.year}
+                </div>
+                <p className="mt-3 text-brand-text leading-relaxed text-sm">
+                  {m.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white via-white/90 to-transparent flex items-center justify-end pr-4">
+          <ChevronRight
+            size={32}
+            className="text-brand-cta animate-pulse"
+          />
         </div>
       </div>
     </Section>

@@ -1,10 +1,12 @@
 import { Section } from '../layout/Section';
+import { Leaf } from 'lucide-react';
 
 export function Environment() {
   return (
     <Section id="umwelt" className="bg-brand-cta/10">
       <div className="max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-semibold">
+        <Leaf size={40} className="text-brand-cta" />
+        <h2 className="mt-4 text-3xl md:text-4xl font-semibold">
           Umwelt- und Klimaschutz
         </h2>
         <p className="mt-6 text-lg text-brand-text leading-relaxed">

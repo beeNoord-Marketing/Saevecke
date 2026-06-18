@@ -6,6 +6,7 @@ import { Intro } from '../components/sections/Intro';
 import { JobTeaser } from '../components/sections/JobTeaser';
 import { DienstleistungenTeaser } from '../components/sections/DienstleistungenTeaser';
 import { Environment } from '../components/sections/Environment';
+import { ImageSlideshow } from '../components/sections/ImageSlideshow';
 import { Reviews } from '../components/sections/Reviews';
 import { Contact } from '../components/sections/Contact';
 
@@ -24,6 +25,7 @@ export function Home() {
         </div>
         <DienstleistungenTeaser />
         <Environment />
+        <ImageSlideshow />
         <Reviews />
         <Contact />
       </main>

@@ -81,7 +81,10 @@ export function Apply() {
           <label className="block mt-3 text-sm font-semibold text-brand-headline">
             Lebenslauf (optional)
           </label>
-          <input type="file" className="mt-1 w-full text-sm" />
+          <input
+            type="file"
+            className="mt-1 block w-full text-sm text-brand-text file:mr-4 file:bg-brand-cta file:text-white file:border-0 file:px-4 file:py-2 file:font-semibold file:cursor-pointer hover:file:opacity-90"
+          />
           <button
             type="submit"
             className="mt-4 w-full bg-brand-red text-white py-2 font-semibold hover:opacity-90"

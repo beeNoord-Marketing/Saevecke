@@ -6,10 +6,19 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <div className="font-bold text-lg">Saevecke GmbH</div>
-          <p className="mt-2 text-white/80 text-sm">
-            Wärme · Kälte · Schall · Brandschutz
+          <p className="mt-2 text-white/80 text-sm leading-relaxed">
+            Rader Heide 19c
             <br />
-            Schwanewede bei Bremen
+            28790 Schwanewede
+            <br />
+            Telefon: 0421 33100400
+            <br />
+            <a
+              href="mailto:info@saevecke.net"
+              className="text-white hover:opacity-80"
+            >
+              info@saevecke.net
+            </a>
           </p>
         </div>
         <div>

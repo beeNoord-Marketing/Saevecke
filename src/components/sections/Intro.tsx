@@ -8,12 +8,11 @@ export function Intro() {
           Saevecke GmbH
         </p>
         <h2 className="mt-3 text-3xl md:text-4xl font-semibold">
-          [Headline Intro, Platzhalter]
+          Zu jeder Zeit flexibel, fair, nah
         </h2>
         <p className="mt-6 text-lg text-brand-text leading-relaxed">
-          Platzhalter, allgemeiner Einleitungstext für die Seite. Hier kommt das
-          „Wer wir sind, was wir machen, warum es uns gibt"-Statement. Zwei bis
-          vier Absätze, norddeutsch direkt, keine Floskeln.
+          Von der Beratung über die Planung bis hin zur Montage bieten wir Ihnen
+          Lösungen aus einer Hand.
         </p>
       </div>
     </Section>
