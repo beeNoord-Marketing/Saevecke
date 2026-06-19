@@ -2,6 +2,7 @@ import { TopNav } from '../components/layout/TopNav';
 import { Footer } from '../components/layout/Footer';
 import { StickyWhatsApp } from '../components/layout/StickyWhatsApp';
 import { Section } from '../components/layout/Section';
+import { WiggleGradient } from '../components/layout/WiggleGradient';
 import { Flame, Snowflake, Volume2, ShieldAlert } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
@@ -44,12 +45,13 @@ export function Dienstleistungen() {
     <>
       <TopNav />
       <main>
-        <section className="bg-brand-cta text-white pt-44 pb-20">
-          <div className="mx-auto max-w-6xl px-6">
+        <section className="relative bg-brand-cta text-white pt-44 pb-24 overflow-hidden">
+          <WiggleGradient />
+          <div className="relative mx-auto max-w-6xl px-6">
             <p className="text-sm uppercase tracking-widest text-white/70">
               Dienstleistungen
             </p>
-            <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white">
+            <h1 className="mt-3 text-5xl md:text-6xl font-bold text-white">
               Unsere Leistungen
             </h1>
             <p className="mt-4 text-lg text-white/80 max-w-2xl">
@@ -63,7 +65,7 @@ export function Dienstleistungen() {
             {services.map((s) => (
               <article
                 key={s.title}
-                className="border border-brand-cta/20 bg-white overflow-hidden hover:border-brand-cta transition-colors"
+                className="bg-white shadow-[0_0_20px_rgba(0,0,0,0.08)] hover:shadow-[0_0_30px_rgba(0,0,0,0.15)] hover:-translate-y-1 overflow-hidden transition-all duration-300"
               >
                 <div className="aspect-video overflow-hidden">
                   <img

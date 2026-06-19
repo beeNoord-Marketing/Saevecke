@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 import zahnraederHero from '../../assets/zahnraeder.jpg';
 
 export function Hero() {
@@ -23,7 +24,7 @@ export function Hero() {
           <p className="text-sm uppercase tracking-widest text-white/80">
             Saevecke GmbH · Schwanewede seit 1989
           </p>
-          <h1 className="mt-4 text-5xl md:text-6xl font-bold leading-tight max-w-3xl text-white">
+          <h1 className="mt-4 text-6xl md:text-7xl font-bold leading-tight max-w-3xl text-white">
             Qualität, Leistung, Vertrauen
           </h1>
           <p className="mt-6 text-lg text-white/90 max-w-xl">
@@ -45,6 +46,12 @@ export function Hero() {
             </Link>
           </div>
         </div>
+      </div>
+      <div
+        aria-hidden="true"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce text-white/70"
+      >
+        <ChevronDown size={32} />
       </div>
     </section>
   );

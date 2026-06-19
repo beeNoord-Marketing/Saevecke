@@ -28,7 +28,7 @@ const benefits = [
 export function Benefits() {
   return (
     <Section id="benefits" className="bg-brand-cta/10">
-      <h2 className="text-3xl md:text-4xl font-semibold">
+      <h2 className="text-4xl md:text-5xl font-semibold">
         Was du bei uns bekommst
       </h2>
       <p className="mt-2 text-brand-text">
@@ -38,7 +38,7 @@ export function Benefits() {
         {benefits.map((b) => (
           <div
             key={b.title}
-            className="relative bg-white border border-brand-cta/20 p-5"
+            className="relative bg-white shadow-[0_0_20px_rgba(0,0,0,0.08)] p-5"
           >
             {b.isNew && (
               <span className="absolute top-3 right-3 bg-brand-red text-white text-[10px] font-bold px-2 py-0.5">

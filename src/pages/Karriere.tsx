@@ -1,6 +1,7 @@
 import { TopNav } from '../components/layout/TopNav';
 import { Footer } from '../components/layout/Footer';
 import { StickyWhatsApp } from '../components/layout/StickyWhatsApp';
+import { WiggleGradient } from '../components/layout/WiggleGradient';
 import { Jobs } from '../components/sections/Jobs';
 import { ApplicationProcess } from '../components/sections/ApplicationProcess';
 import { Apply } from '../components/sections/Apply';
@@ -11,12 +12,13 @@ export function Karriere() {
     <>
       <TopNav />
       <main>
-        <section className="bg-brand-cta text-white pt-44 pb-20">
-          <div className="mx-auto max-w-6xl px-6">
+        <section className="relative bg-brand-cta text-white pt-44 pb-24 overflow-hidden">
+          <WiggleGradient />
+          <div className="relative mx-auto max-w-6xl px-6">
             <p className="text-sm uppercase tracking-widest text-white/70">
               Karriere
             </p>
-            <h1 className="mt-3 text-4xl md:text-5xl font-bold text-white">
+            <h1 className="mt-3 text-5xl md:text-6xl font-bold text-white">
               Deine Karriere @Saevecke
             </h1>
             <p className="mt-4 text-lg text-white/80 max-w-2xl">

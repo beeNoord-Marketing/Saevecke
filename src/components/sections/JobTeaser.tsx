@@ -7,10 +7,13 @@ export function JobTeaser() {
     <Section className="bg-brand-cta/10">
       <div className="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <p className="text-sm uppercase tracking-widest text-brand-cta font-semibold">
-            Aktuell gesucht
-          </p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold">
+          <div className="flex items-center gap-3">
+            <span className="w-12 h-px bg-brand-cta" />
+            <p className="text-xs uppercase tracking-[0.3em] text-brand-cta font-bold">
+              Aktuell gesucht
+            </p>
+          </div>
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
             Wärme-, Kälte- und Schallschutzisolierer (m/w/d)
           </h2>
           <div className="mt-4 flex flex-wrap gap-3 text-sm text-brand-text">

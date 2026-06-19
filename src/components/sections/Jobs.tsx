@@ -1,5 +1,6 @@
 import { MapPin, Clock, Calendar, ArrowRight } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { EditorialEyebrow } from '../layout/EditorialEyebrow';
 
 type Meta = { icon: LucideIcon; text: string };
 type Job = {
@@ -57,18 +58,21 @@ export function Jobs() {
         <div className="absolute inset-0 bg-white/80" />
       </div>
       <div className="relative mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold">Aktive Stellen</h2>
-        <p className="mt-2 text-brand-text">
+        <EditorialEyebrow>Karriere</EditorialEyebrow>
+        <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight">
+          Aktive Stellen
+        </h2>
+        <p className="mt-4 text-lg text-brand-text leading-relaxed max-w-2xl">
           Werde Teil des Teams. Wir freuen uns auf dich.
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {jobs.map((j) => (
             <article
               key={j.eyebrow + j.title}
-              className={`p-6 border bg-white transition-colors ${
+              className={`p-6 bg-white transition-all duration-300 ${
                 j.featured
-                  ? 'border-brand-red'
-                  : 'border-brand-cta/20 hover:border-brand-cta'
+                  ? 'shadow-[0_0_30px_rgba(0,0,0,0.15)]'
+                  : 'shadow-[0_0_20px_rgba(0,0,0,0.08)] hover:shadow-[0_0_30px_rgba(0,0,0,0.15)] hover:-translate-y-1'
               }`}
             >
               <p

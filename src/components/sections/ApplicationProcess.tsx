@@ -1,5 +1,6 @@
 import { Section } from '../layout/Section';
 import { Phone, Users, Mail, FileSignature } from 'lucide-react';
+import { EditorialEyebrow } from '../layout/EditorialEyebrow';
 
 const steps = [
   {
@@ -31,10 +32,13 @@ const steps = [
 export function ApplicationProcess() {
   return (
     <Section className="bg-brand-cta/5">
-      <h2 className="text-3xl md:text-4xl font-semibold">
+      <EditorialEyebrow>Bewerbung</EditorialEyebrow>
+      <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight">
         So läuft die Bewerbung
       </h2>
-      <p className="mt-2 text-brand-text">Kein Anschreiben, kein Deckblatt-Theater.</p>
+      <p className="mt-4 text-lg text-brand-text leading-relaxed max-w-2xl">
+        Kein Anschreiben, kein Deckblatt-Theater.
+      </p>
       <div className="mt-12 grid gap-6 md:grid-cols-4">
         {steps.map((s) => (
           <div key={s.n} className="relative">

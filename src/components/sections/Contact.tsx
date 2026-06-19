@@ -17,7 +17,7 @@ export function Contact() {
         <div className="absolute inset-0 bg-white/85" />
       </div>
       <div className="relative mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold">Kontakt</h2>
+        <h2 className="text-4xl md:text-5xl font-semibold">Kontakt</h2>
       <p className="mt-2 text-brand-text">
         Schreib uns, wir antworten zackig.
       </p>

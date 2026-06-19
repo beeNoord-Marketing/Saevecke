@@ -19,12 +19,12 @@ const reviews = [
 export function Reviews() {
   return (
     <Section className="bg-brand-cta/5">
-      <h2 className="text-3xl md:text-4xl font-semibold">Stimmen</h2>
+      <h2 className="text-4xl md:text-5xl font-semibold">Stimmen</h2>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {reviews.map((r, i) => (
           <div
             key={i}
-            className="bg-white border border-brand-cta/20 p-6"
+            className="bg-white shadow-[0_0_20px_rgba(0,0,0,0.08)] p-6"
           >
             <div className="flex gap-1 text-brand-red">
               {Array.from({ length: 5 }).map((_, k) => (

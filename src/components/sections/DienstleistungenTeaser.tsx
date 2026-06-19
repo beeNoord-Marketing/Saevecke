@@ -22,10 +22,14 @@ export function DienstleistungenTeaser() {
       </div>
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-widest text-white/80 font-semibold">
-            Leistungen
-          </p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-white">
+          <div className="inline-flex items-center gap-3">
+            <span className="w-12 h-px bg-white/70" />
+            <p className="text-xs uppercase tracking-[0.3em] text-white/80 font-bold">
+              Leistungen
+            </p>
+            <span className="w-12 h-px bg-white/70" />
+          </div>
+          <h2 className="mt-5 text-4xl md:text-6xl font-bold text-white tracking-tight">
             Unsere Leistungen
           </h2>
           <p className="mt-6 text-white/90">

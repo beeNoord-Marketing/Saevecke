@@ -1,5 +1,5 @@
 import { Section } from '../layout/Section';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, History } from 'lucide-react';
 
 const milestones = [
   {
@@ -63,7 +63,10 @@ const milestones = [
 export function Roadmap() {
   return (
     <Section id="ueber-uns">
-      <h2 className="text-3xl md:text-4xl font-semibold">Unsere Geschichte</h2>
+      <div className="flex items-center gap-3">
+        <History size={32} className="text-brand-cta shrink-0" />
+        <h2 className="text-4xl md:text-5xl font-semibold">Unsere Geschichte</h2>
+      </div>
       <div className="mt-12 bg-white shadow-[0_0_40px_rgba(0,0,0,0.15)] relative">
         <div className="overflow-x-auto scroll-smooth">
           <div className="relative flex gap-8 px-8 py-10 min-w-max">
@@ -77,10 +80,10 @@ export function Roadmap() {
                 className="w-72 shrink-0 relative"
               >
                 <div className="w-4 h-4 rounded-full bg-brand-cta border-4 border-white relative z-10" />
-                <div className="mt-6 font-bold text-brand-cta text-2xl">
+                <div className="mt-6 font-bold text-brand-cta text-5xl tracking-tight">
                   {m.year}
                 </div>
-                <p className="mt-3 text-brand-text leading-relaxed text-sm">
+                <p className="mt-4 text-brand-text leading-relaxed text-sm">
                   {m.text}
                 </p>
               </article>

@@ -6,7 +6,7 @@ export function Environment() {
     <Section id="umwelt" className="bg-brand-cta/10">
       <div className="max-w-3xl">
         <Leaf size={40} className="text-brand-cta" />
-        <h2 className="mt-4 text-3xl md:text-4xl font-semibold">
+        <h2 className="mt-4 text-4xl md:text-5xl font-semibold">
           Umwelt- und Klimaschutz
         </h2>
         <p className="mt-6 text-lg text-brand-text leading-relaxed">

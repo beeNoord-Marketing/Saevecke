@@ -52,11 +52,10 @@ export function ImageSlideshow() {
       if (nextIndex >= items.length) {
         el.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        items[nextIndex].scrollIntoView({
-          behavior: 'smooth',
-          inline: 'start',
-          block: 'nearest',
-        });
+        const targetRect = items[nextIndex].getBoundingClientRect();
+        const newScrollLeft =
+          el.scrollLeft + (targetRect.left - containerRect.left);
+        el.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
       }
     }, 4000);
     return () => clearInterval(t);
